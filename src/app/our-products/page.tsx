@@ -49,8 +49,10 @@ export default function OurProductsPage() {
   if (snapshot) {
     // Debug: log snapshot
     console.log("Firestore snapshot:", snapshot);
-    console.log("Docs:", snapshot.docs.map(doc => doc.data()));
+    console.log("Document IDs:", snapshot.docs.map(doc => doc.id));
+    console.log("Docs data:", snapshot.docs.map(doc => doc.data()));
     products = snapshot.docs.map(parseProduct).filter(Boolean) as Product[];
+    console.log("Parsed products:", products);
   } else {
     console.log("No Firestore snapshot (not loaded yet or error)");
   }
