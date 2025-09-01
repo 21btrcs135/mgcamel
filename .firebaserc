@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "mgcamel-e0b5c",
+    "staging": "mgcamel-e0b5c"
+  },
+  "targets": {},
+  "etags": {}
+}
